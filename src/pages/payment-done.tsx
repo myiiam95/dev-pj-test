@@ -13,8 +13,8 @@ const PaymentDone = () => {
                 />
             </div>
             <div className="title-pay text-center mt-7 pt-4 tracking-normal">
-                <h1 className="txt-title text-5xl">Booking Successfully completed</h1>
-                <span className="text-xl">Your trip schedule is ready,please check under profile.</span>
+                <h1 className="txt-title">Booking Successfully completed</h1>
+                <span className="">Your trip schedule is ready,please check under profile.</span>
                 <div>
                     <span>Home</span>
                 </div>
