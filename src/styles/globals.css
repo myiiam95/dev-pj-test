@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --txt-header: #2D3DDF;
 }
 
 @theme inline {
@@ -24,3 +25,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* สำหรับ Heading โดยเฉพาะ */
+h1, h2, h3 {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* หรือใน Tailwind CSS */
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.txt-title {
+  color: var(--txt-header);
+  font-weight: 600;
+  font-family: Poppins;
+  /* font-size: 48px; */
+  line-height: normal;
+}
+
