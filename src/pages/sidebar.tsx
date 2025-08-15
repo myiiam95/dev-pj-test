@@ -20,17 +20,17 @@ const Sidebar = () => (
                         <img src="./images/icon-home.png" alt="" />
                         <span>Home</span>
                     </li>
-                    <li>
-                        <img src="./images/icon-home.png" alt="" />
-                        <span>Home</span>
+                    <li className="acvtive">
+                        <img src="./images/icon-a-search.png" alt="" />
+                        <span>Explore</span>
                     </li>
                     <li>
-                        <img src="./images/icon-home.png" alt="" />
-                        <span>Home</span>
+                        <img src="./images/icon-heart.png" alt="" />
+                        <span>Trips</span>
                     </li>
                     <li>
-                        <img src="./images/icon-home.png" alt="" />
-                        <span>Home</span>
+                        <img src="./images/icon-profile.png" alt="" />
+                        <span>Profile</span>
                     </li>
                 </ul>
             </div>
@@ -44,9 +44,21 @@ const Sidebar = () => (
     </div>
 );
 
+
 // const NavItem = ({ icon, label, active }) => (
 //   <div className={`nav-item ${active ? 'active' : ''}`}>
 //     <span className="nav-icon">{icon}</span>
 //     <span className="nav-label">{label}</span>
 //   </div>
 // );
+
+
+const Sidebartab = () => {
+    return (
+        <div className="main-container">
+            <Sidebar />
+        </div>
+    );
+};
+
+export default Sidebartab;

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Sidebar from './sidebar';
 
 const ContentArea = () => (
     <div className="content-area">
@@ -7,58 +8,6 @@ const ContentArea = () => (
         <HeroSection />
     </div>
 );
-
-
-const Sidebar = () => (
-    <div className="sidebar">
-        <div className="sidebar-header">
-            <div className="main-bt">
-                <Link href="/explore">
-                    <Image
-                        src="/images/icon-mainpage.png"
-                        alt="main page"
-                        width={34}
-                        height={30}
-                    />
-                </Link>
-            </div>
-            <div className="sidebar-menu">
-                <ul>
-                    <li>
-                        <img src="./images/icon-home.png" alt="" />
-                        <span>Home</span>
-                    </li>
-                    <li className="acvtive">
-                        <img src="./images/icon-a-search.png" alt="" />
-                        <span>Explore</span>
-                    </li>
-                    <li>
-                        <img src="./images/icon-heart.png" alt="" />
-                        <span>Trips</span>
-                    </li>
-                    <li>
-                        <img src="./images/icon-profile.png" alt="" />
-                        <span>Profile</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div className="sidebar-nav">
-            {/* <NavItem icon="🏡" label="Home" active />
-            <NavItem icon="🔍" label="Explore" />
-            <NavItem icon="✈️" label="Trips" />
-            <NavItem icon="👤" label="Profile" /> */}
-        </div>
-    </div>
-);
-
-// const NavItem = ({ icon, label, active }) => (
-//   <div className={`nav-item ${active ? 'active' : ''}`}>
-//     <span className="nav-icon">{icon}</span>
-//     <span className="nav-label">{label}</span>
-//   </div>
-// );
-
 
 const SearchPanel = () => (
     <div className="search-panel">
