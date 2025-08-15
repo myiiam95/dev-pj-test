@@ -53,18 +53,18 @@ h1 {
 }
 
 .sidebar {
-  width: 80px;
-  background-color: #ffffff;
+  width: 157px;
+  background-color: var(--main-color);
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  justify-content: center;
 }
 
-.sidebar-header {
-  margin-bottom: 40px;
-}
+.sidebar-header {}
 
 .main-bt img {
   width: 30px;
@@ -114,11 +114,9 @@ h1 {
 }
 
 .search-panel {
-  flex-basis: 35%;
-  background-color: #ffffff;
+  flex-basis: 42%;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
 }
@@ -138,10 +136,116 @@ h1 {
   color: #8E8E8E;
 }
 
-.search-section h3, .recent-searches h3 {
-  color: #4d7cff;
+.search-section {
+  padding-top: 38px;
+}
+
+.recent-searches {
   margin-top: 20px;
+}
+
+.search-section h3,
+.recent-searches h3 {
+  color: #221F3C;
   font-size: 18px;
+}
+
+.hotel-list-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  border: 2px solid #D1D1D1;
+  border-radius: 8px;
+}
+
+.hotel-detail {
+  width: 50%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hotel-name {
+  margin: 0;
+}
+
+.hotel-rating-num {
+  display: flex;
+  gap: 20px;
+}
+
+.badge-rating {
+  width: 47px;
+  height: 22px;
+  background-color: #FF6969;
+  color: #ffffff;
+  padding: 2px;
+  border-radius: 30px;
+  line-height: normal;
+  text-align: center;
+}
+
+.badge-rating {
+  font-size: 12px;
+}
+
+.total-review {
+  color: #A8A8A8;
+}
+
+.hotel-amenities {
+  color: #A8A8A8;
+}
+
+.hotel-amenities-list ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.hotel-amenities-list ul li {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 15px 10px 18px 1px rgb(0 0 255 / 0.2);
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.hotel-price {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.hotel-tab-booking {
+  background-color: var(--main-color);
+  color: #ffffff;
+  width: 64px;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  display: flex;
+}
+
+.hotel-tab-booking span {
+  display: block;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 100px;
+  text-align: center;
+  margin: 50px -30px;
 }
 
 .search-tabs {
@@ -204,13 +308,17 @@ h1 {
 }
 
 .search-button {
-  background-color: #4d7cff;
   color: #ffffff;
+  background-color: var(--main-color);
   border: none;
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 22px;
+  width: 256px;
+  height: 68px;
+  opacity: 1;
+  margin: 0 auto;
 }
 
 .recent-search-item {
@@ -287,7 +395,7 @@ h1 {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -297,7 +405,6 @@ h1 {
 }
 
 .hero-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
   position: absolute;
   top: 0;
   left: 0;
@@ -310,8 +417,41 @@ h1 {
   padding: 40px;
 }
 
-.hero-content {
-  text-align: left;
+.hero-content img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  border-radius: 38px;
+}
+
+.overlay-hero {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999
+}
+
+.overlay-hero img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  border-radius: 15px;
+}
+
+.overlay-title {
+  display: block;
+  position: relative;
+  padding-top: 55%;
+  padding-left: 10%;
+  z-index: 99;
 }
 
 .hero-content h1 {
@@ -325,7 +465,7 @@ h1 {
 }
 
 .take-tour-button {
-  background-color: #ffffff 35%;
+  background-color: rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
   border: none;
   padding: 15px 30px;
@@ -339,4 +479,3 @@ h1 {
   opacity: 1;
   border-width: 1px;
 }
-

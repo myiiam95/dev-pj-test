@@ -1,39 +1,16 @@
 import Image from 'next/image';
+import Link from 'next/link';
+// import Sidebar from "";
 
 const Explore = () => {
     return (
         <div className="main-container">
-            <Sidebar />
+            {/* <Sidebar /> */}
             <ContentArea />
         </div>
     );
 };
 
-const Sidebar = () => (
-    <div className="sidebar">
-        <div className="sidebar-header">
-            <div className="main-bt">
-                <Image
-                    src="/images/icon-mainpage.png"
-                    alt="main page"
-                />
-            </div>
-        </div>
-        {/* <div className="sidebar-nav">
-      <NavItem icon="🏡" label="Home" active />
-      <NavItem icon="🔍" label="Explore" />
-      <NavItem icon="✈️" label="Trips" />
-      <NavItem icon="👤" label="Profile" />
-    </div> */}
-    </div>
-);
-
-// const NavItem = ({ icon, label, active }) => (
-//   <div className={`nav-item ${active ? 'active' : ''}`}>
-//     <span className="nav-icon">{icon}</span>
-//     <span className="nav-label">{label}</span>
-//   </div>
-// );
 
 const ContentArea = () => (
     <div className="content-area">
@@ -72,8 +49,51 @@ const SearchPanel = () => (
         </div>
         <div className="recent-searches">
             <h3>Recent Searches</h3>
+            <div className="hotel-list-box">
+                <div className="hotel-img">
+                    <img src="./images/hotel-1.png" alt="hotel"></img>
+                </div>
+                <div className="hotel-detail">
+                    <h3 className="hotel-name">
+                        Hotel JW Marriott
+                    </h3>
+                    {/* <div className="hotel-rating" style="--rating: 4;"></div> */}
+                    <div className="hotel-rating-num">
+                        <div className="badge-rating">★ <span>4.9</span></div>
+                        <span className="total-review"><span>1366</span> Reviews</span>
+                    </div>
+                    <div className="hotel-amenities">
+                        <span>Amenities</span>
+                        <div className="hotel-amenities-list">
+                            <ul>
+                                <li className="parking-item">
+                                    <img src="./images/icon-car.png" alt="" />
+                                </li>
+                                <li className="bath-item">
+                                    <img src="./images/icon-bath.png" alt="" />
+                                </li>
+                                <li className="bar-item">
+                                    <img src="./images/icon-drink.png" alt="" />
+                                </li>
+                                <li className="wifi-item">
+                                    <img src="./images/icon-wifi.png" alt="" />
+                                </li>
+                                <li className="fitness-item">
+                                    <img src="./images/icon-fitness.png" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="hotel-price">
+                        <span>1,000</span>/night
+                    </div>
+                </div>
+                <button className="hotel-tab-booking">
+                    <span>Book Now</span>
+                </button>
+            </div>
             {/* <RecentSearchItem
-        image="https://via.placeholder.com/100x100"
+        image="./im" 
         name="Hotel JW Marriott"
         rating="5.0"
         reviews="2,204 Reviews"
@@ -128,9 +148,15 @@ const HeroSection = () => (
     <div className="hero-section">
         <div className="hero-overlay">
             <div className="hero-content">
-                <h1>Incredible India</h1>
-                <p>“For where thy treasure is,<br />here also will thy heart be.”</p>
-                <button className="take-tour-button">Take Tour</button>
+                <img src="./images/bg-home-img.png" alt="bg"></img>
+                <div className="overlay-hero">
+                    <img src="./images/bg-shadow-home.png" alt="bg"></img>
+                    <div className="overlay-title">                    
+                        <h1>Incredible India</h1>
+                        <p>“For where thy treasure is,<br />here also will thy heart be.”</p>
+                        <button className="take-tour-button">Take Tour</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
